@@ -52,14 +52,14 @@ class GameScore {
       frameRate(60);
       this.sloMo = false;
       console.log("Slow mo reset");
-      SoundManager.playIntroSound();
+      SoundManager.playLongWhistleSound();
     }
 
     // Ball is out of right of canvas
     else if (ball.body.position.x >= CANVAS_WIDTH + ball.r) {
       gameManager.resetPlayers();
       gameManager.resetBall();
-      SoundManager.playIntroSound();
+      SoundManager.playLongWhistleSound();
     }
     // Player 2 scores
     if (
@@ -91,14 +91,14 @@ class GameScore {
       frameRate(60);
       this.sloMo = false;
       console.log("Slow mo reset");
-      SoundManager.playIntroSound();
+      SoundManager.playLongWhistleSound();
     }
 
     // Ball is out of left of canvas
     else if (ball.body.position.x <= 0 - ball.r) {
       gameManager.resetPlayers();
       gameManager.resetBall();
-      SoundManager.playIntroSound();
+      SoundManager.playLongWhistleSound();
     }
   }
 

@@ -260,7 +260,7 @@ class GameMenus {
         ) {
           this.menu = MENU_STATES.P2_LOCAL_SELECTED;
           SoundManager.playBGM();
-          SoundManager.playIntroSound();
+          SoundManager.playLongWhistleSound();
           SoundManager.startCloudOrpheOneshot();
         }
         if (
@@ -295,7 +295,7 @@ class GameMenus {
         ) {
           this.menu = MENU_STATES.P1_LOCAL_LEFT_SELECTED;
           SoundManager.playBGM();
-          SoundManager.playIntroSound();
+          SoundManager.playLongWhistleSound();
           SoundManager.startCloudOrpheOneshot();
         }
         if (
@@ -304,7 +304,7 @@ class GameMenus {
         ) {
           this.menu = MENU_STATES.P1_LOCAL_RIGHT_SELECTED;
           SoundManager.playBGM();
-          SoundManager.playIntroSound();
+          SoundManager.playLongWhistleSound();
           SoundManager.startCloudOrpheOneshot();
         }
       }

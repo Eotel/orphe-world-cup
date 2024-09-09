@@ -1,4 +1,5 @@
-let introSound;
+let longWhistleSound;
+let shortWhistleSound;
 let goalSound;
 let kickSound;
 let jumpSound;
@@ -15,7 +16,8 @@ const SoundManager = {
 
   preload: () => {
     window.soundFormats("mp3", "ogg");
-    introSound = loadSound("assets/sounds/Starting_whistle.mp3");
+    longWhistleSound = loadSound("assets/sounds/Starting_whistle.mp3");
+    shortWhistleSound = loadSound("assets/sounds/short_whistle.mp3");
     goalSound = loadSound("assets/sounds/goal.mp3");
     kickSound = loadSound("assets/sounds/kick.mp3");
     jumpSound = loadSound("assets/sounds/Jump_SE.mp3");
@@ -38,7 +40,9 @@ const SoundManager = {
     }
   },
 
-  playIntroSound: () => SoundManager.playSound(introSound),
+  playLongWhistleSound: () => SoundManager.playSound(longWhistleSound),
+  playShortWhistleSound: () =>
+    SoundManager.playSound(shortWhistleSound, false, true),
   playGoalSound: () => SoundManager.playSound(goalSound, false, true),
   playKickSound: () => SoundManager.playSound(kickSound),
   playJumpSound: () => SoundManager.playSound(jumpSound),
@@ -123,6 +127,7 @@ const SoundManager = {
 
   onGoalScored: () => {
     SoundManager.pauseCloudOrpheOneshot();
+    SoundManager.playShortWhistleSound();
     SoundManager.playGoalSound();
     SoundManager.resumeCloudOrpheOneshot();
   },
