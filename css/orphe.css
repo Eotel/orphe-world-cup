@@ -1,0 +1,34 @@
+#orphe-toolkit-holder {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.orphe-toolkit-container {
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.orphe-toolkit-table {
+  margin-bottom: 0;
+}
+
+.orphe-toolkit-table th,
+.orphe-toolkit-table td {
+  padding: 5px;
+  border-color: #444;
+}
+
+.orphe-3d-canvas {
+  background-color: #333;
+  border: 1px solid #444;
+  margin-top: 10px;
+}
+
+.debug-canvas-toggle {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+}
